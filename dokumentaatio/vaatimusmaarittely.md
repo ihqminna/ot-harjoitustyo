@@ -6,12 +6,14 @@ Sovellus arpoo pelaajille hauskoja tehtäviä ja kysymyksiä, jotka on suunnattu
 Tehtävät ja kysymykset ovat tietokannassa/tiedostossa, josta ne arvotaan kullekin pelaajalle vuorollaan.
 
 
-
 ## Käyttäjät
 
 Peliin syötetään aina uuden pelin alkaessa pelaajien nimet. 
 Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemmin saatetaan lisätä muita käyttäjärooleja.
 
+## Käyttöliittymäluonnos
+
+<iframe src="https://marvelapp.com/60fgeg3?emb=1&iosapp=false&frameless=false" width="1440" height="1024" allowTransparency="true" frameborder="0"></iframe>
 
 
 ## Perusversion toiminnallisuudet
@@ -20,7 +22,6 @@ Aloitusnäkymä (ennen pelin aloittamista)
 
 * Pelaajien nimien lisääminen
 * Pelin aloittaminen
-
 
 Pelinäkymässä (pelin aikana)
 
