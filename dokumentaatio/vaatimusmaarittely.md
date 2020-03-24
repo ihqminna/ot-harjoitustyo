@@ -13,7 +13,7 @@ Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemm
 
 ## Käyttöliittymäluonnos
 
-<iframe src="https://marvelapp.com/60fgeg3?emb=1&iosapp=false&frameless=false" width="1440" height="1024" allowTransparency="true" frameborder="0"></iframe>
+[Käyttöliittymäluonnos](https://marvelapp.com/60fgeg3?emb=1&iosapp=false&frameless=false)
 
 
 ## Perusversion toiminnallisuudet
