@@ -1,7 +1,7 @@
 # Partypeli: vaatimusmäärittely
 ## Sovelluksen tarkoitus
 
-Sovellus on hauskaa ajanvietettä aikuisten juhlimiseen. 
+Sovellus on tarkoitettu ajanvietetteeksi aikuisten juhlimiseen. 
 Sovellus arpoo pelaajille hauskoja tehtäviä ja kysymyksiä, jotka on suunnattu yhdelle tai useammalle pelaajalle kerrallaan.
 Tehtävät ja kysymykset ovat tietokannassa/tiedostossa, josta ne arvotaan kullekin pelaajalle vuorollaan.
 
