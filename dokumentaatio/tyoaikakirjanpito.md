@@ -1,4 +1,4 @@
 PVM | Tunteja | Mitä tein
 ----|----|--------------------
-24.3.| 3 | Sovelluksen suunnittelu ja vaatimusmäärittelyn tekeminen
-**yht** | **3** |
+24.3.| 4 | Sovelluksen suunnittelu ja vaatimusmäärittelyn tekeminen
+**yht** | **4** |

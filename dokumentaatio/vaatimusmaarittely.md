@@ -6,14 +6,15 @@ Sovellus arpoo pelaajille hauskoja tehtäviä ja kysymyksiä, jotka on suunnattu
 Tehtävät ja kysymykset ovat tietokannassa/tiedostossa, josta ne arvotaan kullekin pelaajalle vuorollaan.
 
 
+
 ## Käyttäjät
 
 Peliin syötetään aina uuden pelin alkaessa pelaajien nimet. 
 Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemmin saatetaan lisätä muita käyttäjärooleja.
 
 
-## Perusversion toiminnallisuudet
 
+## Perusversion toiminnallisuudet
 
 Aloitusnäkymä (ennen pelin aloittamista)
 
@@ -29,7 +30,7 @@ Pelinäkymässä (pelin aikana)
 * Siirtyminen seuraavaan tehtävään
 
 
-### Jatkokehitysideat:
+## Jatkokehitysideat:
 
 Jos aikaa jää, seuraavia kehitysideoita voisi toteuttaa:
 
@@ -39,8 +40,12 @@ Jos aikaa jää, seuraavia kehitysideoita voisi toteuttaa:
 	* Tehtävän poistaminen pelin ollessa käynnissä
 	* Pelaajat voisivat itse lisätä ja poistaa kysymyksiä ja tehtäviä
 	* Kysymykset ja tehtävät voisi mahdollisesti tulostaa listana, josta saisi poistettua niitä
-* Pelaajat voisivat tallentaa tietonsa
+* Pelaajat voivat tallentaa tietonsa
 	* Nimi
 	* Kuva
 	* Ääni/slogan tms hauskaa
 * Tehtävän/kysymyksen skippaaminen, niin että samalle pelaajalle arvotaan uusi
+* Pelin valinnat:
+	* Kuinka paljon juomiskysymyksiä? (esim. ei ollenkaan=0, vähän=0.25, paljon=0.6)
+	* Pelkkiä tehtäviä/kysymyksiä
+	* Vain tietty/tietyt kategoriat
