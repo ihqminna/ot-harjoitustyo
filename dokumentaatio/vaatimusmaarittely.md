@@ -1,19 +1,18 @@
-# Partypeli
-## Vaatimusmäärittely
-### Sovelluksen tarkoitus
+# Partypeli: vaatimusmäärittely
+## Sovelluksen tarkoitus
 
 Sovellus on hauskaa ajanvietettä aikuisten juhlimiseen. 
 Sovellus arpoo pelaajille hauskoja tehtäviä ja kysymyksiä, jotka on suunnattu yhdelle tai useammalle pelaajalle kerrallaan.
 Tehtävät ja kysymykset ovat tietokannassa/tiedostossa, josta ne arvotaan kullekin pelaajalle vuorollaan.
 
 
-### Käyttäjät
+## Käyttäjät
 
 Peliin syötetään aina uuden pelin alkaessa pelaajien nimet. 
 Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemmin saatetaan lisätä muita käyttäjärooleja.
 
 
-### Perusversion toiminnallisuudet
+## Perusversion toiminnallisuudet
 
 
 Aloitusnäkymä (ennen pelin aloittamista)
