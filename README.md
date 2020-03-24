@@ -8,6 +8,6 @@
 
 ## Viikko 2
 
-[screenshot.png](https://github.com/ihqminna/ot-harjoitustyo/blob/master/laskarit/viikko2/screenshot.pgn)
+[screenshot.png](https://github.com/ihqminna/ot-harjoitustyo/blob/master/laskarit/viikko2/screenshot.png)
 
 
