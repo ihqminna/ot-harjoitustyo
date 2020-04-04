@@ -7,4 +7,6 @@ PVM | Tunteja | Mitä tein
 29.3.|2|Sovellusarkkitehtuurin pohtiminen ja luokkien lisäys
 29.3.|2| Graafisen käyttöliittymän koodauksen aloittaminen
 30.3.|1| Etäkäytettävyyden testaus
-**yht** | **16** |
+3.4.|1| Tarvittavien pelifunktioiden luomista
+4.4. |3| Käyttöliittymän tekemistä
+**yht** | **20** |

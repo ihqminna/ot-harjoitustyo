@@ -17,17 +17,14 @@ public class GameTest {
     
     @Before
     public void setUp() {
-        player1 = new Player("matthew");
-        player2 = new Player("barnett");
-        players = new ArrayList();
-        players.add(player1);
-        players.add(player2);
-        game = new Game(players);
+        game = new Game();
+        game.addPlayer(new Player("matthew"));
+        game.addPlayer(new Player("barnett"));
     }
 
     @Test
     public void gameIsSet(){
-        assertEquals("matthew, barnett", game.getPlayers());
+        assertEquals("matthew, barnett", game.getNames());
     }
     
 }
