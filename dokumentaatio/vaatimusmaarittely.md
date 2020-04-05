@@ -3,12 +3,12 @@
 
 Sovellus on tarkoitettu ajanvietteeksi aikuisten juhlimiseen. 
 Sovellus arpoo pelaajille hauskoja tehtäviä ja kysymyksiä, jotka on suunnattu yhdelle tai useammalle pelaajalle kerrallaan.
-Tehtävät ja kysymykset ovat tietokannassa/tiedostossa, josta ne arvotaan kullekin pelaajalle vuorollaan.
+Tehtävät ja kysymykset ovat tietokannassa, josta ne tallennetaan ensin välimuistiin tai listalle pelin alkaessa ja arvotaan sitten kullekin pelaajalle vuorollaan.
 
 
 ## Käyttäjät
 
-Peliin syötetään aina uuden pelin alkaessa pelaajien nimet. 
+Peliin syötetään uuden pelin alkaessa pelaajien nimet. 
 Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemmin saatetaan lisätä muita käyttäjärooleja.
 
 ## Käyttöliittymäluonnos
@@ -20,15 +20,19 @@ Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemm
 
 Aloitusnäkymä (ennen pelin aloittamista)
 
-* Pelaajien nimien lisääminen
+* Pelaajien nimien lisääminen ja nimilistan tyhjentäminen
 * Pelin aloittaminen
+
+Välinäkymä
+* Vaikeustason valitseminen (1-3)
+* Juomatehtävien määrän valitseminen (ei yhtään = 0, vähän = 1/3, paljon = 1/2)
 
 Pelinäkymässä (pelin aikana)
 
 * Pelaaja(t), jonka vuoro on nimi näkyvissä
 * Arvottu tehtävä/kysymys esillä
 * Mahdollisuus päättää peli
-* Siirtyminen seuraavaan tehtävään
+* Siirtyminen napilla seuraavaan tehtävään
 
 
 ## Jatkokehitysideat:
@@ -47,6 +51,5 @@ Jos aikaa jää, seuraavia kehitysideoita voisi toteuttaa:
 	* Ääni/slogan tms hauskaa
 * Tehtävän/kysymyksen skippaaminen, niin että samalle pelaajalle arvotaan uusi
 * Pelin valinnat:
-	* Kuinka paljon juomiskysymyksiä? (esim. ei ollenkaan=0, vähän=0.25, paljon=0.6)
 	* Pelkkiä tehtäviä/kysymyksiä
 	* Vain tietty/tietyt kategoriat

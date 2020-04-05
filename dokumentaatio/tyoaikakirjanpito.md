@@ -11,4 +11,5 @@ PVM | Tunteja | Mitä tein
 4.4. |5| Käyttöliittymän tekemistä
 4.4. |2| Daon luominen
 4.4. |3| Tietokannan ja tehtävien luominen
-**yht** | **27** |
+5.4. |1| Daon ja tietokannan yhdistämistä
+**yht** | **28** |
