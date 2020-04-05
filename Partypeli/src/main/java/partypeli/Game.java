@@ -4,12 +4,22 @@ import java.util.ArrayList;
 
 public class Game {
     public ArrayList<Player> players;
+    public int difficulty;
+    public int drinkingAmount;
         
     public Game(){
         this.players = new ArrayList();
     }
     public void addPlayer(Player player){
         this.players.add(player);
+    }
+    
+    public void setDifficulty(int dif){
+        this.difficulty = dif;
+    }
+    
+    public void setDrinkingAmount(int drink){
+        this.drinkingAmount = drink;
     }
     
     public Player getPlayer(int i){
@@ -26,6 +36,10 @@ public class Game {
             }
         }
         return names;
+    }
+    
+    public int numberOfPlayers(){
+        return players.size();
     }
     
     public void deletePlayers(){
