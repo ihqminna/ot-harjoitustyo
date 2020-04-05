@@ -9,5 +9,6 @@ PVM | Tunteja | Mitä tein
 30.3.|1| Etäkäytettävyyden testaus
 3.4.|1| Tarvittavien pelifunktioiden luomista
 4.4. |5| Käyttöliittymän tekemistä
-4.4. |X| Daon luominen
-**yht** | **22** |
+4.4. |2| Daon luominen
+4.4. |3| Tietokannan ja tehtävien luominen
+**yht** | **27** |
