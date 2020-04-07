@@ -1,5 +1,5 @@
 
-package partypeli;
+package partypeli.domain;
 
 public class Task {
     public Integer id;

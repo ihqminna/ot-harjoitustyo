@@ -20,19 +20,19 @@ Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemm
 
 Aloitusnäkymä (ennen pelin aloittamista)
 
-* Pelaajien nimien lisääminen ja nimilistan tyhjentäminen
-* Pelin aloittaminen
+* Pelaajien nimien lisääminen ja nimilistan tyhjentäminen (tehty)
+* Pelin aloittaminen (tehty)
 
 Välinäkymä
 * Vaikeustason valitseminen (1-3)
-* Juomatehtävien määrän valitseminen (ei yhtään = 0, vähän = 1/3, paljon = 1/2)
+* Juomatehtävien määrän valitseminen (ei yhtään = 0, vähän = 1/3, paljon = 1/2) (tehty)
 
 Pelinäkymässä (pelin aikana)
 
-* Pelaaja(t), jonka vuoro on nimi näkyvissä
+* Pelaaja(t), jonka vuoro on nimi näkyvissä (tehty)
 * Arvottu tehtävä/kysymys esillä
 * Mahdollisuus päättää peli
-* Siirtyminen napilla seuraavaan tehtävään
+* Siirtyminen napilla seuraavaan tehtävään (tehty)
 
 
 ## Jatkokehitysideat:

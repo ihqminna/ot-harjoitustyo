@@ -12,4 +12,7 @@ PVM | Tunteja | Mitä tein
 4.4. |2| Daon luominen
 4.4. |3| Tietokannan ja tehtävien luominen
 5.4. |1| Daon ja tietokannan yhdistämistä
-**yht** | **28** |
+5.4. |1| Käyttöliittymän tekemistä
+7.4. |2| Käyttöliittymän tekemistä
+7.4. |2| Pakkausten luominen, Checkstylen lisääminen, luokkakaavio
+**yht** | **33** |

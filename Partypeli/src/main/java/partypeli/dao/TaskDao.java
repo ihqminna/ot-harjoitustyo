@@ -1,8 +1,9 @@
 
-package partypeli;
+package partypeli.dao;
 
 import java.util.*;
 import java.sql.*;
+import partypeli.domain.Task;
 
 public class TaskDao implements Dao<Task, Integer> {
 

@@ -1,6 +1,8 @@
 
-package partypeli;
+package partypeli.domain;
 
+import partypeli.domain.Player;
+import partypeli.domain.Game;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
