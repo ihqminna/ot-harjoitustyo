@@ -8,4 +8,4 @@ Sovellus on tarkoitettu hauskaksi ajanvietoksi aikuisten juhliin. Sovellukseen s
 
 [Työaikakirjanpito](https://github.com/ihqminna/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
-[Arkkitehtuuri]
+[Arkkitehtuuri](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/arkkitehtuuri.md)
