@@ -182,10 +182,17 @@ public class PartypeliUi extends Application {
             primaryStage.setScene(gameMode);
         });
         
-        Button next = addButton("Seuraava", 20, 680, 630, gameLayout);
+        Button next = addButton("Seuraava", 30, 670, 630, gameLayout);
         next.setOnAction((event) ->{
             player.setText(game.getNextPlayerName());
             // task = seuraava tehtävä
+        });
+        
+        Button exit = addButton("Lopeta peli", 14, 710, 760, gameLayout);
+        exit.setOnAction((event) ->{
+            game.deletePlayers();
+            players.setText("Pelaajat:");
+            primaryStage.setScene(startPage);
         });
         
         primaryStage.setScene(startPage);
