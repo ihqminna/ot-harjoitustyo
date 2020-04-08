@@ -24,7 +24,7 @@ Aloitusnäkymä (ennen pelin aloittamista)
 * Pelin aloittaminen (tehty)
 
 Välinäkymä
-* Vaikeustason valitseminen (1-3)
+* Vaikeustason valitseminen (1-3) (tehty)
 * Juomatehtävien määrän valitseminen (ei yhtään = 0, vähän = 1/3, paljon = 1/2) (tehty)
 
 Pelinäkymässä (pelin aikana)
@@ -40,7 +40,7 @@ Pelinäkymässä (pelin aikana)
 Jos aikaa jää, seuraavia kehitysideoita voisi toteuttaa:
 
 * Tehtävät ja kysymykset kategorioihin
-	* Esimerkiksi kysymyksille aihealueita tai tehtäville teemoja (esim. juominen)
+	* Esimerkiksi kysymyksille aihealueita tai tehtäville teemoja (esim. rakkaus, seksi, kännimokat)
 * Kysymysten ja tehtävien muokkaus
 	* Tehtävän poistaminen pelin ollessa käynnissä
 	* Pelaajat voisivat itse lisätä ja poistaa kysymyksiä ja tehtäviä
