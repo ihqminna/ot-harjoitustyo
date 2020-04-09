@@ -4,6 +4,9 @@ package partypeli.ui;
 // import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 // import javafx.event.ActionEvent;
 // import javafx.event.EventType;
@@ -140,8 +143,19 @@ public class PartypeliUi extends Application {
         
         Button startGame = addButton("Aloita peli", 32, 630, 650, startLayout);
         startGame.setOnAction((event) -> {
-            // lisää if: jos pelaajia väh. 2
-            primaryStage.setScene(setDifficulty);
+            if (game.numberOfPlayers() >= 2) {
+                primaryStage.setScene(setDifficulty);
+                player.setText(game.getNextPlayerName());
+                try {
+                    game.makeTaskList();
+                } catch (SQLException ex) {
+                    Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                //task.setText(game.getNextTask());
+                task.setText("tehtäviä: " + game.numberOfTasks());
+            } else {
+                max.setText("Pelissä tulee olla vähintään 2 pelaajaa");
+            }
         });
         
         Button easy = addButton("Helppo",20, 450, 580, difLayout);
@@ -185,7 +199,7 @@ public class PartypeliUi extends Application {
         Button next = addButton("Seuraava", 30, 670, 630, gameLayout);
         next.setOnAction((event) ->{
             player.setText(game.getNextPlayerName());
-            // task = seuraava tehtävä
+            task.setText(game.getNextTask());
         });
         
         Button exit = addButton("Lopeta peli", 14, 710, 760, gameLayout);

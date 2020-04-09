@@ -5,36 +5,51 @@ import java.util.*;
 import java.sql.*;
 import partypeli.domain.Task;
 
-public class TaskDao implements Dao<Task, Integer> {
+public class TaskDao implements Dao<Task> {
+    public ArrayList<Task> questions;
+    public ArrayList<Task> drinkingTasks;
+    Scanner lukija;
 
-    @Override
-    public void create(Task task) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // lisää task tietokantaan
+    public TaskDao() throws SQLException {
     }
 
-    @Override
-    public Task read(Integer i) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // lue task
+    public ArrayList<Task> getQuestions(int difficulty) throws SQLException {
+        Connection connection = DriverManager.getConnection("jdbc:sqlite:C:/sqlite/partypeli");
+        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Task WHERE Drinking = ? AND Difficulty < ?");
+           
+        difficulty += 1;
+        stmt.setInt(1, 0);
+        stmt.setInt(2, difficulty);
+        
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()){
+            Task task = new Task(rs.getString("Task"), false);
+            this.questions.add(task);
+        }
+        
+        stmt.close();
+        rs.close();
+        connection.close();
+        return this.questions;
     }
 
-    @Override
-    public Task update(Task task) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // muokkaa taskia
+    public ArrayList<Task> getDrinkingTasks(int difficulty) throws SQLException {
+        Connection connection = DriverManager.getConnection("jdbc:sqlite:./partypeli", "sa", "");
+        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Task WHERE Drinking = ? AND Difficulty < ?");
+           
+        difficulty += 1;
+        stmt.setInt(1, 1);
+        stmt.setInt(2, difficulty);
+        
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()){
+            Task task = new Task(rs.getString("Task"), true);
+            this.drinkingTasks.add(task);
+        }
+        
+        stmt.close();
+        rs.close();
+        connection.close();
+        return this.drinkingTasks;
     }
-
-    @Override
-    public void delete(Integer i) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // poista task
-    }
-
-    @Override
-    public List<Task> list() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // lue taskit listalle
-    }
-    
 }

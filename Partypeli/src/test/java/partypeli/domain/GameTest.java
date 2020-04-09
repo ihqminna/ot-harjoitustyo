@@ -25,8 +25,37 @@ public class GameTest {
     }
 
     @Test
-    public void gameIsSet(){
+    public void gameIsSet() {
         assertEquals("matthew, barnett", game.getNames());
     }
     
+    @Test
+    public void settingDifficulty() {        
+        game.setDifficulty(3);
+        assertEquals(3, game.getDifficulty());
+    }
+    
+    @Test
+    public void settingDrinkingAmount() {
+        game.setDrinkingAmount(0);
+        assertEquals(0, game.getDrinkingAmount());
+    }
+    
+    @Test
+    public void deletePlayers() {
+        game.deletePlayers();
+        assertEquals(0, game.numberOfPlayers());
+    }
+    
+    @Test
+    public void correctNumberOfPlayers() {
+        assertEquals(2, game.numberOfPlayers());
+    }
+    
+    @Test
+    public void getNextName() {
+        assertEquals("matthew", game.getNextPlayerName());
+        assertEquals("barnett", game.getNextPlayerName());
+        assertEquals("matthew", game.getNextPlayerName());
+    }
 }

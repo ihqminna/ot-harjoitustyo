@@ -17,4 +17,7 @@ PVM | Tunteja | Mitä tein
 7.4. |2| Pakkausten luominen, Checkstylen lisääminen, luokkakaavio
 8.4.|1| Ensimmäisen jarin generointi
 8.4.|1| Käyttöliittymän tekemistä
-**yht** | **35** |
+8.4. |1| Testien lisäämistä
+8.4. |3| Tietokannan yhdistämistä
+9.4. |4| Tietokannan yhdistämistä
+**yht** | **43** |
