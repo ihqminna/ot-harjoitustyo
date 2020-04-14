@@ -16,7 +16,7 @@ Viikko 5 tulossa
 
 ## Komentorivitoiminnot
 
-# Testaus
+### Testaus
 
 Testit suoritetaan komennolla
 
@@ -28,7 +28,7 @@ Testikattavuusraportti luodaan komennolla
 
 Kattavuusraporttia voit tarkastella avaamalla selaimella tiedosto *target/site/jacoco/index.html*
 
-# Suoritettacan jarin generointi
+### Suoritettavan jarin generointi
 
 Komento
 
@@ -36,7 +36,7 @@ Komento
 
 generoi hakemistoon *target* suoritettavan jar-tiedoston *Partypeli-1.0-SNAPSHOT.jar*
 
-# JavaDoc
+### JavaDoc
 
 Tulossa
 
@@ -44,6 +44,6 @@ Tulossa
 
 Checkstyle-tarkistukset suoritetaan komennolla
 
-`mvn jxr:jxr checkstyle:checkstyle
+`mvn jxr:jxr checkstyle:checkstyle`
 
 Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto *target/site/checkstyle.html*
