@@ -4,7 +4,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import partypeli.dao.TaskDao;
+//import partypeli.dao.TaskDao;
+import partypeli.dao.TaskFileDao;
 
 public class Game {
     public ArrayList<Player> players;
@@ -12,14 +13,17 @@ public class Game {
     public int difficulty;
     public int drinkingAmount;
     public int turn;
-    public TaskDao taskdao;
+    public TaskFileDao taskdao;
     public Random rnd;
         
     public Game() {
         this.players = new ArrayList();
+        this.tasks = new ArrayList();
         this.turn = 0;
         this.rnd = new Random();
+        this.taskdao = new TaskFileDao();
     }
+    
     public void addPlayer(Player player) {
         this.players.add(player);
     }
@@ -40,7 +44,6 @@ public class Game {
         } else {
             this.turn = 0;
         }
-        
         return player;
     }
     
@@ -75,23 +78,30 @@ public class Game {
         return this.drinkingAmount;
     }
     
-    public void makeTaskList() throws SQLException {
-        if (this.drinkingAmount == 0){
-            makeTaskListWODrinking();
-        } else {
-            makeTaskListWDrinking();
+    public void makeTaskList() {
+        this.tasks.addAll(taskdao.getQuestions());
+        
+        for(int i=0; i <this.tasks.size(); i++) {
+            Task task = this.tasks.get(i);
+            if(task.getDifficulty() > this.difficulty){
+               this.tasks.remove(i);
+               i--;
+            }
         }
+        
+        //add with drinking tasks separately
+
     }
     
-    public void makeTaskListWODrinking() throws SQLException {
-        this.tasks.addAll(taskdao.getQuestions(this.difficulty));
+    public void makeTaskListWODrinking() {
+        this.tasks.addAll(taskdao.getQuestions());
     }
     
-    public void makeTaskListWDrinking() throws SQLException {
+    public void makeTaskListWDrinking() {
         ArrayList<Task> questions = new ArrayList();
         ArrayList<Task> drinkingTasks = new ArrayList();
-        questions = taskdao.getQuestions(this.difficulty);
-        drinkingTasks = taskdao.getDrinkingTasks(this.difficulty);
+        //questions = taskdao.getQuestions();
+        drinkingTasks = taskdao.getDrinkingTasks();
         Collections.shuffle(questions);
         Collections.shuffle(drinkingTasks);
         
@@ -117,7 +127,7 @@ public class Game {
         
     }
     
-    public String getNextTask() {
+    public String getRandomTask() {
         String task = tasks.get(rnd.nextInt(tasks.size())).getTask();
         return task;
     }

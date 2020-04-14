@@ -20,4 +20,7 @@ PVM | Tunteja | Mitä tein
 8.4. |1| Testien lisäämistä
 8.4. |3| Tietokannan yhdistämistä
 9.4. |4| Tietokannan yhdistämistä
-**yht** | **43** |
+11.4.|2| Tietokannan yhdistämistä
+11.4.|2| Tietokannan vaihtaminen tiedostoon
+11.4.|4| Pelin testaus
+**yht** | **51** |

@@ -114,8 +114,8 @@ public class PartypeliUi extends Application {
         addImageView(-500, gameLayout);
         addImageView(850, gameLayout);
         addTitle(100, 250, 70, gameLayout);
-        Text player = addText("", 40, Color.WHITE, 680, 400, gameLayout);
-        Text task = addText("", 30, Color.WHITE, 680, 500, gameLayout);
+        Text player = addText("", 50, Color.WHITE, 700, 400, gameLayout);
+        Text task = addText("", 36, Color.WHITE, 400, 500, gameLayout);
         
         Button empty = addButton("Tyhjennä pelaajat", 13, 660, 580, startLayout);
         empty.setOnAction((event) ->{
@@ -145,14 +145,9 @@ public class PartypeliUi extends Application {
         startGame.setOnAction((event) -> {
             if (game.numberOfPlayers() >= 2) {
                 primaryStage.setScene(setDifficulty);
-                player.setText(game.getNextPlayerName());
-                try {
-                    game.makeTaskList();
-                } catch (SQLException ex) {
-                    Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                //task.setText(game.getNextTask());
-                task.setText("tehtäviä: " + game.numberOfTasks());
+                player.setText(game.getNextPlayerName());               
+                game.makeTaskList();
+                task.setText(game.getRandomTask());
             } else {
                 max.setText("Pelissä tulee olla vähintään 2 pelaajaa");
             }
@@ -199,7 +194,7 @@ public class PartypeliUi extends Application {
         Button next = addButton("Seuraava", 30, 670, 630, gameLayout);
         next.setOnAction((event) ->{
             player.setText(game.getNextPlayerName());
-            task.setText(game.getNextTask());
+            task.setText(game.getRandomTask());
         });
         
         Button exit = addButton("Lopeta peli", 14, 710, 760, gameLayout);
