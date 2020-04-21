@@ -81,11 +81,11 @@ public class Game {
     public void makeTaskList() {
         this.tasks.addAll(taskdao.getQuestions());
         
-        for(int i=0; i <this.tasks.size(); i++) {
+        for (int i = 0; i < this.tasks.size(); i++) {
             Task task = this.tasks.get(i);
-            if(task.getDifficulty() > this.difficulty){
-               this.tasks.remove(i);
-               i--;
+            if (task.getDifficulty() > this.difficulty) {
+                this.tasks.remove(i);
+                i--;
             }
         }
         
@@ -93,7 +93,7 @@ public class Game {
 
     }
     
-    public void makeTaskListWODrinking() {
+    /*public void makeTaskListWODrinking() {
         this.tasks.addAll(taskdao.getQuestions());
     }
     
@@ -125,7 +125,7 @@ public class Game {
     
     public void makeTaskListWLotDrinking(ArrayList<Task> questions, ArrayList<Task> drinkingtasks) {
         
-    }
+    }*/
     
     public String getRandomTask() {
         String task = tasks.get(rnd.nextInt(tasks.size())).getTask();

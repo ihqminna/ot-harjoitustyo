@@ -23,4 +23,8 @@ PVM | Tunteja | Mitä tein
 11.4.|2| Tietokannan yhdistämistä
 11.4.|2| Tietokannan vaihtaminen tiedostoon
 11.4.|4| Pelin testaus
-**yht** | **51** |
+21.4.|2| Testien tekemistä
+21.4.|1| Koodin korjausta
+21.4.|1| Sekvenssikaavio
+21.4.|1| Releasen tekeminen
+**yht** | **56** |
