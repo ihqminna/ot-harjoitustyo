@@ -7,6 +7,11 @@ import java.util.Random;
 //import partypeli.dao.TaskDao;
 import partypeli.dao.TaskFileDao;
 
+/**
+ * Luokka on yksi pelikerta, joka sisältää pelaajat ja muut pelin tiedot 
+ * 
+ */
+
 public class Game {
     public ArrayList<Player> players;
     public ArrayList<Task> tasks;
@@ -24,6 +29,12 @@ public class Game {
         this.taskdao = new TaskFileDao();
     }
     
+    /**
+     * Metodi lisää pelaajan peliin.
+     * 
+     * @param Pelaaja
+     */
+    
     public void addPlayer(Player player) {
         this.players.add(player);
     }
@@ -36,6 +47,12 @@ public class Game {
         this.drinkingAmount = drink;
     }
     
+    /**
+     * Metodi hakee seuraavan pelaajan nimen.
+     * 
+     * @return seuraavan pelaajan nimi merkkijonona
+     */
+    
     public String getNextPlayerName() {
         String player = players.get(this.turn).getName();
         
@@ -46,6 +63,12 @@ public class Game {
         }
         return player;
     }
+    
+    /**
+     * Metodi hakee kaikkien pelaajien nimet yhdeksi merkkijonoksi.
+     * 
+     * @return kaikkien pelaajien nimet 
+     */
     
     public String getNames() {
         String names = "";
@@ -65,6 +88,10 @@ public class Game {
     public int numberOfTasks() {
         return this.tasks.size();
     }
+    
+    /**
+     * Metodi poistaa kaikki pelaajat.
+     */
                 
     public void deletePlayers() {
         players.clear();
@@ -77,6 +104,10 @@ public class Game {
     public int getDrinkingAmount() {
         return this.drinkingAmount;
     }
+    
+    /**
+     * Metodi valmistelee peliin tehtävä/kysymyslistan.
+     */
     
     public void makeTaskList() {
         this.tasks.addAll(taskdao.getQuestions());
@@ -126,6 +157,12 @@ public class Game {
     public void makeTaskListWLotDrinking(ArrayList<Task> questions, ArrayList<Task> drinkingtasks) {
         
     }*/
+    
+    /**
+     * Metodi hakee satunnaisen tehtävän/kysymyksen.
+     * 
+     * @return satunnainen tehtävä tai kysymys
+     */
     
     public String getRandomTask() {
         String task = tasks.get(rnd.nextInt(tasks.size())).getTask();

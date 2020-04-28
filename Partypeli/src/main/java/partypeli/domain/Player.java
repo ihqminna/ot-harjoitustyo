@@ -1,6 +1,10 @@
 
 package partypeli.domain;
 
+/**
+ * Luokan oliot muodostavat pelin pelaajat.
+ */
+
 public class Player {
     public String name;
     

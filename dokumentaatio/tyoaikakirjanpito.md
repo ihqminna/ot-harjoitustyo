@@ -27,4 +27,7 @@ PVM | Tunteja | Mitä tein
 21.4.|1| Koodin korjausta
 21.4.|1| Sekvenssikaavio
 21.4.|1| Releasen tekeminen
-**yht** | **56** |
+28.4.|1| Javadocin lisääminen
+28.4.|1| Arkkitehtuurikuvauksen aloittaminen
+28.4. |1| Käyttöohjeen aloittaminen
+**yht** | **58** |

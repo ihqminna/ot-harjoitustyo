@@ -1,6 +1,10 @@
 
 package partypeli.domain;
 
+/**
+ * Luokan oliot ovat pelin tehtäviä/kysymyksiä.
+ */
+
 public class Task {
     public String task;
     public int dif;
