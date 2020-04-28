@@ -8,7 +8,7 @@ Ohjelman rakenne noudattaa kolmitasoista kerrosarkkitehtuuria.
 
 ## Luokat
 
-![alt text](https://raw.githubusercontent.com/ihqminna/PartyPeli/master/Partypel$)
+![alt text](https://github.com/ihqminna/PartyPeli/blob/master/Partypeli/partypeli.png)
 
 ## Käyttöliittymä
 
