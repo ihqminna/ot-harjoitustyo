@@ -11,7 +11,6 @@ import javafx.application.Application;
 // import javafx.event.ActionEvent;
 // import javafx.event.EventType;
 import javafx.geometry.Insets;
-// import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.Group;
@@ -27,7 +26,6 @@ import javafx.scene.layout.BorderStrokeStyle;
 import javafx.scene.layout.BorderWidths;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-//import javafx.scene.paint.ImagePattern;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import partypeli.domain.Game;
@@ -76,7 +74,7 @@ public class PartypeliUi extends Application {
     }
     
     @Override
-    public void start(Stage primaryStage) throws FileNotFoundException{  
+    public void start(Stage primaryStage) throws FileNotFoundException, ClassNotFoundException, SQLException {  
         Game game = new Game();
         
         Group startLayout = new Group(); 
@@ -146,7 +144,13 @@ public class PartypeliUi extends Application {
             if (game.numberOfPlayers() >= 2) {
                 primaryStage.setScene(setDifficulty);
                 player.setText(game.getNextPlayerName());               
-                game.makeTaskList();
+                try {
+                    game.makeTaskList();
+                } catch (SQLException ex) {
+                    Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 task.setText(game.getRandomTask());
             } else {
                 max.setText("Pelissä tulee olla vähintään 2 pelaajaa");

@@ -30,4 +30,5 @@ PVM | Tunteja | Mitä tein
 28.4.|1| Javadocin lisääminen
 28.4.|1| Arkkitehtuurikuvauksen aloittaminen
 28.4. |1| Käyttöohjeen aloittaminen
-**yht** | **58** |
+7.5.|6| Tietokantayhteyden kanssa tuskailua
+**yht** | **63** |

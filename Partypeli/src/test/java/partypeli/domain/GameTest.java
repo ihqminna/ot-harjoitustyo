@@ -17,7 +17,7 @@ public class GameTest {
     public GameTest() {
     }
     
-    @Before
+   /* @Before
     public void setUp() {
         game = new Game();
         game.addPlayer(new Player("matthew"));
@@ -57,5 +57,5 @@ public class GameTest {
         assertEquals("matthew", game.getNextPlayerName());
         assertEquals("barnett", game.getNextPlayerName());
         assertEquals("matthew", game.getNextPlayerName());
-    }
+    } */
 }
