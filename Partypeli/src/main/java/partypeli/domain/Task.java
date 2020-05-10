@@ -2,7 +2,7 @@
 package partypeli.domain;
 
 /**
- * Luokan oliot ovat pelin tehtäviä.
+ * Class members are the different tasks of a game.
  */
 
 public class Task {

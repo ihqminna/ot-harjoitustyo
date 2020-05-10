@@ -2,7 +2,7 @@
 package partypeli.ui;
 
 /**
- * Main-luokka käynnistää käyttöliittymän.
+ * Main class starts the user interface.
  */
 
 public class Main {

@@ -12,7 +12,7 @@ Sovellus on tarkoitettu hauskaksi ajanvietoksi aikuisten juhliin. Sovellukseen s
 
 [Käyttöohje](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/kayttoohje.md)
 
-[Testausdokumentti]
+[Testausdokumentti](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/testausdokumentti.md)
 
 ## Releaset
 

@@ -2,7 +2,7 @@
 package partypeli.domain;
 
 /**
- * Luokan oliot muodostavat pelin pelaajat.
+ * Class members are the individual players of a game.
  */
 
 public class Player {
