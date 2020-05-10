@@ -4,8 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import partypeli.domain.Task;
 /**
+ * This class connects the game to the database.
  *
- * @author ihqminna
  */
 public class TaskDao {
     private String url;
@@ -17,22 +17,40 @@ public class TaskDao {
         this.connection = null;
     }
     
-    public Connection getConnection() throws SQLException {
+    
+    /**
+     * Method creates a connection to the database.
+     * @return database connection
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    
+    public Connection getConnection() throws SQLException, ClassNotFoundException {
         if (connection == null) {
+            //Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection(this.url);
         }
         return connection;
     }
+    
+    /**
+     * Method makes a list of the questions in the database with the chosen or smaller difficulty.
+     * @param dif = difficulty of the game
+     * @return list of questions for the game
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
 
     
-    public ArrayList<Task> getQuestions (int dif) throws SQLException, ClassNotFoundException {
+    public ArrayList<Task> getTasks(int dif) throws SQLException, ClassNotFoundException {
         getConnection();
         Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM Tasks WHERE Drinking = False AND Difficulty <=" + dif);
+        String difficulty = "difficulty <= " + Integer.toString(dif) + ";";
+        ResultSet rs = stmt.executeQuery("SELECT * FROM Tasks WHERE " + difficulty);
         ArrayList<Task> tasks = new ArrayList();
         
         while (rs.next()) {
-            tasks.add(new Task(rs.getString("Task"), rs.getBoolean("Drinking")));
+            tasks.add(new Task(rs.getString("task")));
         }
         
         stmt.close();
@@ -40,18 +58,4 @@ public class TaskDao {
         connection.close();
         return tasks;        
     }
-    
-    /*public ArrayList<Task> getDrinkingTasks(int dif) throws SQLException {
-        Statement stmt = db.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM Tasks WHERE Drinking = True AND Difficulty <=" + dif);
-        ArrayList<Task> tasks = new ArrayList();
-        
-        while (rs.next()) {
-            tasks.add(new Task(rs.getString("Task"), rs.getBoolean("Drinking")));
-        }
-        
-        stmt.close();
-        rs.close();
-        return tasks;
-    }*/
 }

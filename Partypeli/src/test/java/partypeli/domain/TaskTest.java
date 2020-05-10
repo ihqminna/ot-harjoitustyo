@@ -1,37 +1,29 @@
 
 package partypeli.domain;
-
-import org.junit.After;
-import org.junit.AfterClass;
+;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Test class for class Task.
+ * @author ihqminna
+ */
+
 public class TaskTest {
+    Task task;
     
     public TaskTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+ 
     @Before
     public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+        task = new Task("test task");
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void taskAdded() {
+        assertEquals("test task", task.getTask());
+    }
+    
 }

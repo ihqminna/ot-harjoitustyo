@@ -31,4 +31,9 @@ PVM | Tunteja | Mitä tein
 28.4.|1| Arkkitehtuurikuvauksen aloittaminen
 28.4. |1| Käyttöohjeen aloittaminen
 7.5.|6| Tietokantayhteyden kanssa tuskailua
-**yht** | **63** |
+8.5.|2| Tietokantayhteyden luominen
+10.5. |2| Tietokannan päivitys
+10.5. |1| Dokumenttien päivitys
+10.5. |2| Testausten päivitys
+10.5. |1| Lopullinen palautus
+**yht** | **71** |

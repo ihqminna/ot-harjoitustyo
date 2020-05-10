@@ -8,8 +8,7 @@ Tehtävät ja kysymykset ovat tietokannassa, josta ne tallennetaan ensin välimu
 
 ## Käyttäjät
 
-Peliin syötetään uuden pelin alkaessa pelaajien nimet. 
-Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemmin saatetaan lisätä muita käyttäjärooleja.
+Peliin syötetään uuden pelin alkaessa pelaajien nimet. Pelin ainoa käyttäjä on *normaali käyttäjä*, sillä erillisiä käyttäjiä ei tarvita.
 
 ## Käyttöliittymäluonnos
 
@@ -20,36 +19,15 @@ Ainakin alkuvaiheessa ainoa käyttäjärooli on *normaali käyttäjä*, myöhemm
 
 Aloitusnäkymä (ennen pelin aloittamista)
 
-* Pelaajien nimien lisääminen ja nimilistan tyhjentäminen (tehty)
-* Pelin aloittaminen (tehty)
+* Pelaajien nimien lisääminen ja nimilistan tyhjentäminen
+* Pelin aloittaminen
 
 Välinäkymä
-* Vaikeustason valitseminen (1-3) (tehty)
-* Juomatehtävien määrän valitseminen (ei yhtään = 0, vähän = 1/3, paljon = 1/2) (tehty)
+* Vaikeustason valitseminen (1-3)
 
 Pelinäkymässä (pelin aikana)
 
-* Pelaaja(t), jonka vuoro on nimi näkyvissä (tehty)
+* Pelaaja, jonka vuoro on nimi näkyvissä
 * Arvottu tehtävä/kysymys esillä
 * Mahdollisuus päättää peli
-* Siirtyminen napilla seuraavaan tehtävään (tehty)
-
-
-## Jatkokehitysideat:
-
-Jos aikaa jää, seuraavia kehitysideoita voisi toteuttaa:
-
-* Tehtävät ja kysymykset kategorioihin
-	* Esimerkiksi kysymyksille aihealueita tai tehtäville teemoja (esim. rakkaus, seksi, kännimokat)
-* Kysymysten ja tehtävien muokkaus
-	* Tehtävän poistaminen pelin ollessa käynnissä
-	* Pelaajat voisivat itse lisätä ja poistaa kysymyksiä ja tehtäviä
-	* Kysymykset ja tehtävät voisi mahdollisesti tulostaa listana, josta saisi poistettua niitä
-* Pelaajat voivat tallentaa tietonsa
-	* Nimi
-	* Kuva
-	* Ääni/slogan tms hauskaa
-* Tehtävän/kysymyksen skippaaminen, niin että samalle pelaajalle arvotaan uusi
-* Pelin valinnat:
-	* Pelkkiä tehtäviä/kysymyksiä
-	* Vain tietty/tietyt kategoriat
+* Siirtyminen napilla seuraavaan tehtävään

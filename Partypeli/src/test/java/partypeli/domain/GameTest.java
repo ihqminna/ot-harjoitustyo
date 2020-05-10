@@ -1,8 +1,7 @@
 
 package partypeli.domain;
 
-import partypeli.domain.Player;
-import partypeli.domain.Game;
+import java.sql.SQLException;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -17,8 +16,8 @@ public class GameTest {
     public GameTest() {
     }
     
-   /* @Before
-    public void setUp() {
+   @Before
+    public void setUp() throws ClassNotFoundException, SQLException {
         game = new Game();
         game.addPlayer(new Player("matthew"));
         game.addPlayer(new Player("barnett"));
@@ -33,12 +32,6 @@ public class GameTest {
     public void settingDifficulty() {        
         game.setDifficulty(3);
         assertEquals(3, game.getDifficulty());
-    }
-    
-    @Test
-    public void settingDrinkingAmount() {
-        game.setDrinkingAmount(0);
-        assertEquals(0, game.getDrinkingAmount());
     }
     
     @Test
@@ -57,5 +50,12 @@ public class GameTest {
         assertEquals("matthew", game.getNextPlayerName());
         assertEquals("barnett", game.getNextPlayerName());
         assertEquals("matthew", game.getNextPlayerName());
-    } */
+    }
+    
+    @Test
+    public void makesTaskList() throws SQLException, ClassNotFoundException {
+        game.setDifficulty(3);
+        game.makeTaskList();
+        assertNotNull(game.getRandomTask());
+    }
 }

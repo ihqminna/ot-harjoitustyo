@@ -17,7 +17,6 @@ public class Game {
     public ArrayList<Task> drinkingTasks;
     public ArrayList<Task> questions;
     public int difficulty;
-    public int drinkingAmount;
     public int turn;
     public TaskDao taskdao;
     public Random rnd;
@@ -33,9 +32,9 @@ public class Game {
     }
     
     /**
-     * Metodi lisää pelaajan peliin.
+     * Method adds a player to the game.
      * 
-     * @param Pelaaja
+     * @param Player
      */
     
     public void addPlayer(Player player) {
@@ -46,14 +45,10 @@ public class Game {
         this.difficulty = dif;
     }
     
-    public void setDrinkingAmount(int drink) {
-        this.drinkingAmount = drink;
-    }
-    
     /**
-     * Metodi hakee seuraavan pelaajan nimen.
+     * Method looks up the name of the next player.
      * 
-     * @return seuraavan pelaajan nimi merkkijonona
+     * @return next players' name as a string
      */
     
     public String getNextPlayerName() {
@@ -68,7 +63,7 @@ public class Game {
     }
     
     /**
-     * Method sets players' names as a string.
+     * Method makes a string of all players' names.
      * 
      * @return players' names as a string
      */
@@ -105,10 +100,6 @@ public class Game {
         return this.difficulty;
     }
     
-    public int getDrinkingAmount() {
-        return this.drinkingAmount;
-    }
-    
     /**
      *Method uses Dao to get tasks and calls for other methods if the amount of drinking tasks is set.
      */
@@ -116,44 +107,9 @@ public class Game {
     public void makeTaskList() throws SQLException, ClassNotFoundException {
         //this.drinkingTasks.addAll(taskdao.getDrinkingTasks(this.difficulty));
         //Collections.shuffle(this.drinkingTasks);
-        this.questions.addAll(taskdao.getQuestions(this.difficulty));
+        this.questions.addAll(taskdao.getTasks(this.difficulty));
         Collections.shuffle(this.questions);
-        if (this.drinkingAmount == 2) {
-            makeTaskListLotOfDrinking();
-        } else if (this.drinkingAmount == 1) {
-            makeTaskListLittleOfDrinking();
-        } else if (this.drinkingAmount == 0) {
-            this.tasks.addAll(this.questions);
-        }
-    }
-    
-    /**
-     * Method chooses the tasks so that half of those are drinking tasks and the other half questions.
-     */
-
-    public void makeTaskListLotOfDrinking() {
-        int i = 0;
-        while (i < this.drinkingTasks.size() && i < this.questions.size()) {
-            this.tasks.add(this.drinkingTasks.get(i));
-            this.tasks.add(this.questions.get(i));
-            i++;
-        }
-    }
-    
-    /**
-     * Method chooses the tasks so that third of those are drinking tasks.
-     */
-    
-    public void makeTaskListLittleOfDrinking() {
-        int i = 0;
-        int j = this.questions.size() - 1;
-        while (i < this.drinkingTasks.size() && i < (this.questions.size() / 2)) {
-            this.tasks.add(this.drinkingTasks.get(i));
-            this.tasks.add(this.questions.get(i));
-            this.tasks.add(this.questions.get(j));
-            i++;
-            j--;
-        }
+        this.tasks.addAll(this.questions);
     }
     
     /**

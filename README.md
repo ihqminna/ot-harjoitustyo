@@ -10,6 +10,9 @@ Sovellus on tarkoitettu hauskaksi ajanvietoksi aikuisten juhliin. Sovellukseen s
 
 [Arkkitehtuurikuvaus](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/arkkitehtuurikuvaus.md)
 
+[Käyttöohje](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/kayttoohje.md)
+
+
 ## Releaset
 
 Viikko 5 tulossa

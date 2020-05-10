@@ -1,15 +1,11 @@
 package partypeli.ui;
 
-// import java.awt.event.KeyAdapter;
-// import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
-// import javafx.event.ActionEvent;
-// import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -98,14 +94,6 @@ public class PartypeliUi extends Application {
         addTitle(560, 360, 80, difLayout);
         addText("Valitse vaikeustaso:", 25, Color.WHITE, 600, 500, difLayout);
         
-        Group drinkingLayout = new Group();
-        Scene setDrinking = new Scene(drinkingLayout, 1500, 1000);
-        setDrinking.setFill(Color.DARKRED);
-        addImageView(-400, drinkingLayout);
-        addImageView(750, drinkingLayout);
-        addTitle(560, 360, 80, drinkingLayout);
-        addText("Valitse juomatehtävien määrä:", 25, Color.WHITE, 540, 500, drinkingLayout);
-        
         Group gameLayout = new Group();
         Scene gameMode = new Scene(gameLayout, 1500, 1000);
         gameMode.setFill(Color.DARKRED);
@@ -113,7 +101,7 @@ public class PartypeliUi extends Application {
         addImageView(850, gameLayout);
         addTitle(100, 250, 70, gameLayout);
         Text player = addText("", 50, Color.WHITE, 700, 400, gameLayout);
-        Text task = addText("", 36, Color.WHITE, 400, 500, gameLayout);
+        Text task = addText("Oletko valmis?", 36, Color.WHITE, 400, 500, gameLayout);
         
         Button empty = addButton("Tyhjennä pelaajat", 13, 660, 580, startLayout);
         empty.setOnAction((event) ->{
@@ -144,14 +132,6 @@ public class PartypeliUi extends Application {
             if (game.numberOfPlayers() >= 2) {
                 primaryStage.setScene(setDifficulty);
                 player.setText(game.getNextPlayerName());               
-                try {
-                    game.makeTaskList();
-                } catch (SQLException ex) {
-                    Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                task.setText(game.getRandomTask());
             } else {
                 max.setText("Pelissä tulee olla vähintään 2 pelaajaa");
             }
@@ -160,38 +140,38 @@ public class PartypeliUi extends Application {
         Button easy = addButton("Helppo",20, 450, 580, difLayout);
         Button mid = addButton("Keskitaso", 20, 650, 580, difLayout);
         Button difficult = addButton("Vaikea", 20, 880, 580, difLayout);
-        
+                
         easy.setOnAction((event) -> {
             game.setDifficulty(1);
-            primaryStage.setScene(setDrinking);
+            try {
+                game.makeTaskList();
+            } catch (SQLException ex) {
+                Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            primaryStage.setScene(gameMode);
         });
         
         mid.setOnAction((event) -> {
             game.setDifficulty(2);
-            primaryStage.setScene(setDrinking);
+            try {
+                game.makeTaskList();
+            } catch (SQLException | ClassNotFoundException ex) {
+                Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            primaryStage.setScene(gameMode);
         });
-                
+        
         difficult.setOnAction((event) -> {
             game.setDifficulty(3);
-            primaryStage.setScene(setDrinking);
-        });
-        
-        Button none = addButton("Ei yhtään", 20, 480, 580, drinkingLayout);
-        Button little = addButton("Vähän", 20, 678, 580, drinkingLayout);
-        Button lot = addButton("Paljon", 20, 850, 580, drinkingLayout);
-                
-        none.setOnAction((event) -> {
-            game.setDrinkingAmount(0);
-            primaryStage.setScene(gameMode);
-        });
-        
-        little.setOnAction((event) -> {
-            game.setDrinkingAmount(1);
-            primaryStage.setScene(gameMode);
-        });
-        
-        lot.setOnAction((event) -> {
-            game.setDrinkingAmount(2);
+            try {
+                game.makeTaskList();
+            } catch (SQLException ex) {
+                Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(PartypeliUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             primaryStage.setScene(gameMode);
         });
         
