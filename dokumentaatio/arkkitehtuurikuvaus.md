@@ -4,8 +4,6 @@
 
 Ohjelman rakenne noudattaa kolmitasoista kerrosarkkitehtuuria.
 
-(pakkausrakenne tulossa)
-
 ## Luokat
 
 ![alt text](https://github.com/ihqminna/PartyPeli/blob/master/Partypeli/partypeli.png)

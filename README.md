@@ -12,10 +12,11 @@ Sovellus on tarkoitettu hauskaksi ajanvietoksi aikuisten juhliin. Sovellukseen s
 
 [Käyttöohje](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/kayttoohje.md)
 
+[Testausdokumentti]
 
 ## Releaset
 
-Viikko 5 tulossa
+Viikko 5 ja 6 sekä Lopullinen palautus
 
 ## Komentorivitoiminnot
 
