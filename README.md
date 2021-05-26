@@ -6,17 +6,12 @@ Sovellus on tarkoitettu hauskaksi ajanvietoksi aikuisten juhliin. Sovellukseen s
 
 [Vaatimusmäärittely](https://github.com/ihqminna/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](https://github.com/ihqminna/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
-
 [Arkkitehtuurikuvaus](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/arkkitehtuurikuvaus.md)
 
 [Käyttöohje](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/kayttoohje.md)
 
 [Testausdokumentti](https://github.com/ihqminna/PartyPeli/blob/master/dokumentaatio/testausdokumentti.md)
 
-## Releaset
-
-Viikko 5 ja 6 sekä Lopullinen palautus
 
 ## Komentorivitoiminnot
 
@@ -39,10 +34,6 @@ Komento
 `mvn package`
 
 generoi hakemistoon *target* suoritettavan jar-tiedoston *Partypeli-1.0-SNAPSHOT.jar*
-
-### JavaDoc
-
-Tulossa
 
 # Checkstyle
 
